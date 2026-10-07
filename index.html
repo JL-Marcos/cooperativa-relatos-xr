@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,31 +15,71 @@
 
     <a-scene>
 
-        <!-- Cámara -->
+        <!-- ========================= -->
+        <!-- CIELO / FONDO             -->
+        <!-- ========================= -->
+
+        <a-sky color="#111111"></a-sky>
+
+
+        <!-- ========================= -->
+        <!-- CÁMARA                    -->
+        <!-- ========================= -->
+
         <a-camera position="0 1.6 4"></a-camera>
 
-        <!-- Suelo -->
+
+        <!-- ========================= -->
+        <!-- SUELO                     -->
+        <!-- ========================= -->
+
         <a-plane
             position="0 0 0"
             rotation="-90 0 0"
-            width="10"
-            height="10"
-            color="#333333">
+            width="12"
+            height="12"
+            color="#222222">
         </a-plane>
 
-        <!-- Objeto de prueba -->
+
+        <!-- ========================= -->
+        <!-- PARED DEL FONDO            -->
+        <!-- ========================= -->
+
+        <a-plane
+            position="0 2 -5"
+            width="12"
+            height="4"
+            color="#181818">
+        </a-plane>
+
+
+        <!-- ========================= -->
+        <!-- RELATO / OBJETO DE PRUEBA -->
+        <!-- ========================= -->
+
         <a-box
             position="0 1 -3"
             width="2"
             height="2"
-            depth="2"
+            depth="0.2"
             color="#00ffff">
         </a-box>
 
-        <!-- Luz -->
+
+        <!-- ========================= -->
+        <!-- ILUMINACIÓN                -->
+        <!-- ========================= -->
+
         <a-light
             type="ambient"
-            intensity="1">
+            intensity="0.8">
+        </a-light>
+
+        <a-light
+            type="point"
+            position="0 3 -2"
+            intensity="1.5">
         </a-light>
 
     </a-scene>
